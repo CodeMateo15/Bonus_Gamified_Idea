@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { Auth } from '@supabase/auth-ui-react'
+import {
+  // Import predefined theme
+  ThemeSupa,
+} from '@supabase/auth-ui-shared'
+import { createClient } from '@supabase/supabase-js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const supabase = createClient(
+  process.env.REACT_APP_SUPABASE_URL,
+  process.env.REACT_APP_ANON_KEY
+)
+
+const App = () => (
+  <Auth
+    supabaseClient={supabase}
+    appearance={{ theme: ThemeSupa }}
+  />
+)
 
 export default App;
