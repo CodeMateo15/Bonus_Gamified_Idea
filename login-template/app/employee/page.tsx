@@ -19,12 +19,12 @@ export default async function ProtectedPage() {
   return (
     <div className="flex-1 w-full flex flex-col gap-20 items-center">
       <div className="w-full">
-        <div className="py-6 font-bold bg-purple-950 text-center">
-          This is a employee page
+        <div className="py-6 font-bold bg-cyan-950 text-center text-white">
+          This is the employee page
         </div>
-        <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
+        <nav className="w-full font-bold flex justify-center border-b border-b-foreground/10 h-16">
           <div className="w-full max-w-4xl flex justify-between items-center p-3 text-sm">
-            <DeployButton />
+            Utility Solutions Group
             <AuthButton />
           </div>
         </nav>
@@ -37,6 +37,12 @@ export default async function ProtectedPage() {
           <FetchDataSteps />
         </main>
       </div>
+
+      <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
+        <p>
+          Product of Utility Solutions Group
+        </p>
+      </footer>
     </div>
   );
 }
