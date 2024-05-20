@@ -15,6 +15,7 @@ export default function Login({
     const email = formData.get("email") as string;
     const password = formData.get("password") as string;
     const supabase = createClient();
+    const adminBool = formData.get("adminBoolean") === "true";
 
     const { error } = await supabase.auth.signInWithPassword({
       email,
@@ -25,7 +26,12 @@ export default function Login({
       return redirect("/login?message=Could not authenticate user");
     }
 
-    return redirect("/protected");
+    if (adminBool) {
+      return redirect("/admin");
+    }
+    else {
+      return redirect("/employee");
+    }
   };
 
   const signUp = async (formData: FormData) => {
