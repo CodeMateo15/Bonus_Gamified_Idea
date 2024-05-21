@@ -3,20 +3,17 @@ import AuthButton from "@/components/AuthButton";
 import { createClient } from "@/utils/supabase/server";
 import FetchDataSteps from "@/components/tutorial/FetchDataSteps";
 import Header from "@/components/Header";
-import { useRouter } from "next/router";
 import { redirect } from "next/navigation";
-import { SubmitButton } from "./submit-button";
 
 // Define the User type
 type User = {
-  id: string;
-  email: string;
-  created_at: string;
-};
+    id: string;
+    email: string;
+    created_at: string;
+  };
 
 export default async function AdminPage() {
   const supabase = createClient();
-  const router = useRouter();
 
   // Fetch the current user
   const {
@@ -27,6 +24,8 @@ export default async function AdminPage() {
   if (!user) {
     return redirect("/login");
   }
+  
+ 
 
   return (
     <div className="flex-1 w-full flex flex-col gap-20 items-center">
@@ -45,20 +44,8 @@ export default async function AdminPage() {
       <div className="flex flex-col items-center gap-4 mt-8">
         <h2 className="text-xl font-bold">Choose Employee Shipping Numbers Chart</h2>
         <div className="flex gap-4">
-          <SubmitButton
-            className="px-4 py-2 bg-blue-500 text-white rounded"
-            formAction="/serv_reg_chart"
-            pendingText="Navigating..."
-          >
-            Serv Reg Bonus Chart
-          </SubmitButton>
-          <SubmitButton
-            className="px-4 py-2 bg-green-500 text-white rounded"
-            formAction="/C&I_chart"
-            pendingText="Navigating..."
-          >
-            C&I Reg Bonus Chart
-          </SubmitButton>
+          <button className="px-4 py-2 bg-blue-500 text-white rounded">Serv Reg Bonus Chart</button>
+          <button className="px-4 py-2 bg-green-500 text-white rounded">C&I Reg Bonus Chart</button>
         </div>
       </div>
 
