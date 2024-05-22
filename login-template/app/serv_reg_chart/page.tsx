@@ -40,15 +40,7 @@ export default async function AdminPage() {
           </div>
         </nav>
       </div>
-
-      <div className="flex flex-col items-center gap-4 mt-8">
-        <h2 className="text-xl font-bold">Choose Employee Shipping Numbers Chart</h2>
-        <div className="flex gap-4">
-          <button className="px-4 py-2 bg-blue-500 text-white rounded">Serv Reg Bonus Chart</button>
-          <button className="px-4 py-2 bg-green-500 text-white rounded">C&I Reg Bonus Chart</button>
-        </div>
-      </div>
-
+      
       <footer className="w-full border-t border-t-foreground/10 p-8 flex justify-center text-center text-xs">
         <p>Product of Utility Solutions Group</p>
       </footer>

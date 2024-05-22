@@ -27,10 +27,10 @@ export default function Login({
     }
 
     if (adminBool) {
-      return redirect("/admin");
+      return redirect("/employee");
     }
     else {
-      return redirect("/employee");
+      return redirect("/admin");
     }
   };
 
