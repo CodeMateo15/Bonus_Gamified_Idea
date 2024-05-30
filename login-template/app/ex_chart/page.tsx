@@ -5,10 +5,13 @@ import FetchDataSteps from "@/components/tutorial/FetchDataSteps";
 import Header from "@/components/Header";
 import { redirect } from "next/navigation";
 import dynamic from 'next/dynamic';
+
 // Import EditableTable dynamically
 const EditableTable = dynamic(() => import('@/components/editableTable'), {
   ssr: false, // Disable server-side rendering
 });
+
+
 
 // Define the User type
 type User = {
@@ -17,7 +20,7 @@ type User = {
   created_at: string;
 };
 
-export default async function AdminPage() {
+export default async function ChartPage() {
   const supabase = createClient();
 
   // Fetch the current user
@@ -44,7 +47,7 @@ export default async function AdminPage() {
         </nav>
       </div>
       {/* Adjust the width as needed */}
-      <h1 className="text-xl font-semibold">Serv Reg Chart - Editable</h1>
+      <h1 className="text-xl font-semibold">Example Chart Page (with old bonus format) - Editable</h1>
       <div style={{ width: '1300px' }}>
         <EditableTable />
       </div>

@@ -33,12 +33,12 @@ export default async function AdminPage() {
       <div className="flex flex-col gap-4 items-center">
         <h1 className="text-xl font-semibold mb-4">Choose Employee Shipping Numbers Chart</h1>
         <div className="flex gap-4">
-          <Link href="/C&I_chart">
+          <Link href="/ex_chart">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
               Go to C&I Chart
             </button>
           </Link>
-          <Link href="/serv_reg_chart">
+          <Link href="/ex_chart">
             <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
               Go to Serv Reg Chart
             </button>
