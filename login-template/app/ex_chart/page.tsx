@@ -1,16 +1,17 @@
 import DeployButton from "@/components/DeployButton";
 import AuthButton from "@/components/AuthButton";
+import EditableTable from "@/components/editableTable";
 import { createClient } from "@/utils/supabase/server";
 import FetchDataSteps from "@/components/tutorial/FetchDataSteps";
 import Header from "@/components/Header";
 import { redirect } from "next/navigation";
 import dynamic from 'next/dynamic';
-
+/*
 // Import EditableTable dynamically
 const EditableTable = dynamic(() => import('@/components/editableTable'), {
   ssr: false, // Disable server-side rendering
 });
-
+*/
 
 
 // Define the User type
